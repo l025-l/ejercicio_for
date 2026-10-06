@@ -8,14 +8,14 @@
 /* Estilos de fondo y tipografía */
 body {
     font-family: 'Share Tech Mono', monospace;
-    background-color: #050a15; /* Azul casi negro */
-    color: #00ffcc; /* Cian neón */
+    background-color: #050a15;
+    color: #00ffcc;
     display: flex;
     justify-content: center;
     padding: 20px;
-    
+
     /* Fondo con patrón de cuadrícula tecnológica */
-    background-image: 
+    background-image:
         linear-gradient(rgba(0, 255, 204, 0.05) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0, 255, 204, 0.05) 1px, transparent 1px);
     background-size: 20px 20px;
@@ -25,14 +25,14 @@ body {
 .contenedor {
     width: 100%;
     max-width: 500px;
-    background-color: rgba(5, 10, 21, 0.85); /* Fondo semitransparente */
+    background-color: rgba(5, 10, 21, 0.85);
     padding: 30px;
     border-radius: 8px;
-    
+
     /* Borde con efecto de resplandor neón */
     border: 1px solid #00ffcc;
-    box-shadow: 0 0 20px rgba(0, 255, 204, 0.15), 
-                inset 0 0 15px rgba(0, 255, 204, 0.1);
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.15),
+        inset 0 0 15px rgba(0, 255, 204, 0.1);
     text-align: center;
     backdrop-filter: blur(4px);
 }
@@ -56,7 +56,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
 }
 
-/* Efecto al pasar el mouse por el botón (Se ilumina) */
+/* Efecto al pasar el mouse por el botón */
 .btn-probar:hover {
     background-color: #00ffcc;
     color: #050a15;
@@ -82,7 +82,7 @@ h1 {
     border-collapse: collapse;
 }
 
-.tabla-multiplicar th, 
+.tabla-multiplicar th,
 .tabla-multiplicar td {
     padding: 12px;
     border: 1px solid rgba(0, 255, 204, 0.3);
@@ -98,7 +98,7 @@ h1 {
     text-shadow: 0 0 5px #00ffcc;
 }
 
-/* Efecto de escaneo al pasar por las filas (Hover) */
+/* Efecto de escaneo al pasar por las filas */
 .tabla-multiplicar tbody tr {
     transition: all 0.2s ease;
 }
@@ -110,22 +110,88 @@ h1 {
     text-shadow: 0 0 5px #00ffcc;
 }
 
-/* Ajustes Responsive para pantallas móviles */
+/* =========================================
+   ESTILOS DEL PIE DE PÁGINA (FIRMA)
+========================================= */
+.pie-pagina {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px dashed rgba(0, 255, 204, 0.3);
+    font-size: 0.9rem;
+    color: rgba(0, 255, 204, 0.7);
+    letter-spacing: 1px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.pie-pagina:hover {
+    color: #00ffcc;
+    text-shadow: 0 0 5px #00ffcc;
+}
+
+/* Animación del cursor para darle efecto de terminal */
+.cursor-parpadeante {
+    font-weight: bold;
+    animation: parpadeo 1s step-end infinite;
+}
+
+@keyframes parpadeo {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Ajustes Responsive */
 @media (max-width: 400px) {
     .contenedor {
         padding: 15px;
     }
+
     .btn-probar {
         width: 100%;
         max-width: none;
         font-size: 16px;
     }
-    .tabla-multiplicar th, 
+
+    .tabla-multiplicar th,
     .tabla-multiplicar td {
         padding: 10px 5px;
         font-size: 1rem;
     }
+
     h1 {
         font-size: 1.4rem;
     }
+
+    .pie-pagina {
+        font-size: 0.8rem;
+    }
+}
+
+/* --- LOGO CIERVO --- */
+.contenedor-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.contenedor-logo img {
+    width: 220px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.contenedor-logo img:hover {
+    transform: translateY(-5px);
 }
