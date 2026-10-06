@@ -1,0 +1,109 @@
+/* Reseteo básico para eliminar márgenes por defecto del navegador */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos generales del cuerpo */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Contenedor principal responsive */
+.contenedor {
+    width: 100%;
+    max-width: 500px; /* Evita que crezca demasiado en pantallas grandes */
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estilos del botón PROBAR */
+.btn-probar {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    width: 100%;
+    max-width: 250px;
+}
+
+.btn-probar:hover {
+    background-color: #0056b3;
+}
+
+.btn-probar:active {
+    transform: scale(0.98);
+}
+
+/* Estilos del título */
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Estilos de la tabla */
+.tabla-multiplicar {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-multiplicar th, 
+.tabla-multiplicar td {
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    font-size: 1.1rem;
+}
+
+.tabla-multiplicar th {
+    background-color: #28a745;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+/* Filas alternas para facilitar la lectura */
+.tabla-multiplicar tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.tabla-multiplicar tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+/* Media query para pantallas muy pequeñas (teléfonos antiguos o estrechos) */
+@media (max-width: 400px) {
+    .contenedor {
+        padding: 15px;
+    }
+
+    .btn-probar {
+        width: 100%;
+        max-width: none;
+    }
+
+    .tabla-multiplicar th, 
+    .tabla-multiplicar td {
+        padding: 10px 5px;
+        font-size: 1rem;
+    }
+    
+    h1 {
+        font-size: 1.25rem;
+    }
+}
