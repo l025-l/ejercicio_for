@@ -225,3 +225,11 @@ h1 {
 .input-tecnologico::placeholder {
     color: rgba(0, 255, 204, 0.5);
 }
+
+/* Estilos para el texto de instrucciones */
+.instrucciones {
+    font-size: 0.95rem;
+    color: rgba(0, 255, 204, 0.8);
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
